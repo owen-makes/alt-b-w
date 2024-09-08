@@ -42,6 +42,7 @@ const container = document.getElementById('colorContainer');
 const toggle = document.getElementById('colorToggle');
 const root = document.documentElement;
 const header = document.querySelector('h1')
+const label = document.querySelector('.toggle-label')
 
 function createColorCards(colors) {
   container.innerHTML = '';
@@ -80,12 +81,14 @@ toggle.addEventListener('change', () => {
   if (toggle.checked) {
       root.classList.remove('dark');
       root.classList.add('light');
-      header.textContent = 'Alt White'
+      header.textContent = 'Alt-White'
+      label.textContent = 'See Alt-Black'
       createColorCards(lightColors);
   } else {
       root.classList.remove('light');
       root.classList.add('dark');
-      header.textContent = 'Alt Black'
+      header.textContent = 'Alt-Black'
+      label.textContent = 'See Alt-White'
       createColorCards(darkColors);
   }
 });

@@ -114,6 +114,5 @@ input:checked + .slider:before {
 }
 .toggle-label {
   margin-left: 8px;
-  vertical-align: super;
   font-size: 0.7rem;
 }
