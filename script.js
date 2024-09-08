@@ -35,7 +35,7 @@ const lightColors = [
   { name: "Azure", hex: "#F0FFFF", rgb: "240, 255, 255" },
   { name: "Lavender Blush", hex: "#FFF0F5", rgb: "255, 240, 245" },
   { name: "Misty Rose", hex: "#FFE4E1", rgb: "255, 228, 225" },
-  { name: "Gray94", hex: "#f0f0f0", rgb: "240, 240, 240" }
+  { name: "Gray94", hex: "#F0F0F0", rgb: "240, 240, 240" }
 ];
 
 const container = document.getElementById('colorContainer');
