@@ -94,4 +94,5 @@ toggle.addEventListener('change', () => {
 });
 
 // Initial load
+root.classList.add('dark');
 createColorCards(darkColors);
