@@ -58,8 +58,8 @@ function createColorCards(colors) {
 
       `;
       card.addEventListener('click', () => {
-          navigator.clipboard.writeText(`rgb(${color.rgb})`).then(() => {
-              alert(`RGB code copied: rgb(${color.rgb})`);
+          navigator.clipboard.writeText(`${color.hex}`).then(() => {
+              alert(`HEX copied to clipboard: ${color.hex}`);
           }).catch(err => {
               console.error('Failed to copy: ', err);
           });

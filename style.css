@@ -1,3 +1,6 @@
+:root {
+  --transition-speed: 0.9s;
+}
 :root.dark {
   --color-base-bg: rgb(0, 0, 0);
   --color-base-text: rgb(240, 240, 240);
@@ -18,6 +21,7 @@ body {
   padding-right: min(3%, 40px);
   padding-top: 10px;
   padding-bottom: 30px;
+  transition: background-color var(--transition-speed), color var(--transition-speed);
 }
 
 header {
@@ -25,8 +29,9 @@ header {
   justify-content: end;
   align-items: baseline;
   height: min-content;
-  background-color: var(--color-base-bg);
+  /* background-color: var(--color-base-bg); */
   margin-bottom: 10px;
+  transition: color var(--transition-speed);
 }
 
 h1 {
@@ -119,6 +124,7 @@ input:checked + .slider:before {
   transform: translateX(18px);
 }
 .toggle-label {
-  margin-left: 8px;
-  font-size: 0.7rem;
+  margin-left: 3px;
+  margin-right: 6px;
+  font-size: 0.8rem;
 }
