@@ -1,0 +1,119 @@
+:root.dark {
+  --color-base-bg: rgb(0, 0, 0);
+  --color-base-text: rgb(240, 240, 240);
+
+}
+:root.light {
+  --color-base-bg: rgb(240, 240, 240);
+  --color-base-text: rgb(18, 18, 18);
+
+}
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  background-color: var(--color-base-bg);
+  color: var(--color-base-text);
+  margin: 0;
+  padding: min(3%, 40px);
+}
+
+header {
+  display: flex;
+  justify-content: end;
+  align-items: baseline;
+  background-color: var(--color-base-bg);
+}
+
+h1 {
+  padding-left: 3px;
+  font-size: clamp(2rem, 0.75rem + 1.5vw, 4rem);
+  color: var(--color-base-text);
+}
+
+span {
+  font-size: 40%;
+  color: var(--color-base-text);
+  font-weight: 400;
+  display: inline-block;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 2px;
+  flex-wrap: wrap;
+  gap: min(3vw, 10px);
+  justify-items: stretch;
+}
+.color-card {
+  height: 12vh;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 10px;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.color-card:hover {
+  transform: scale(1.05);
+}
+.color-name {
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-size: clamp(0.4rem, 1rem, 1.7rem);
+
+}
+.color-info {
+  font-size: 0.7rem;
+}
+
+.toggle-container {
+  text-align: left;
+  margin-left: auto;
+}
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 22px;
+}
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 34px;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+input:checked + .slider {
+  background-color: orange;
+}
+input:checked + .slider:before {
+  transform: translateX(18px);
+}
+.toggle-label {
+  margin-left: 8px;
+  vertical-align: super;
+  font-size: 0.7rem;
+}
